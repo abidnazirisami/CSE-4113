@@ -22,3 +22,5 @@ void drawPoint(int x, int y, int zone);
 void symMenu() ;
 void drawBoxes() ;
 void drawSymBox(int zone);
+int calcbits(int x, int y, int l, int r, int b, int t);
+void clipMenu();

@@ -70,7 +70,8 @@ int direction(int d, int zone) {
 
 void menu() {
     int selector;
-    printf("Enter \n\t1 for dda\n\t2 for midpoint\n\t3 for random lines\n\t4 for 8-way symmetry\n\t5 to clear the window\n\t6 to use drawboxes\n\t7 to exit\n");
+    printf("Enter \n\t1 for dda\n\t2 for midpoint\n\t3 for random lines\n\t4 for 8-way symmetry\n\t5 to clear the window\n\t6 to use drawboxes\n\t7 to use line clipping algorithm\n");
+    printf("\t8 to exit\n");
     scanf("%d", &selector);
     if(selector==1) {
         dda();
@@ -90,6 +91,9 @@ void menu() {
     }
     else if(selector==6) {
         drawBoxes();
+    }
+    else if(selector==7) {
+        clipMenu();
     }
     else return;
     
