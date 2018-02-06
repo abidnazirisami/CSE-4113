@@ -1,4 +1,4 @@
-#define max_point 320
+#define max_point 640
 #define AXIS 0
 #define DIAGONAL 1
 
@@ -24,3 +24,5 @@ void drawBoxes() ;
 void drawSymBox(int zone);
 int calcbits(int x, int y, int l, int r, int b, int t);
 void clipMenu();
+void cyrus_beck(double x1, double y_1, double x2, double y2, double xmin, double xmax, double ymin, double ymax);
+void cymenu();

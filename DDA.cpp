@@ -6,7 +6,7 @@
 
 void ddaAlgo(double x1, double y_1, double x2, double y2) {
     int zone = selectZone(x1, y_1,x2,y2);
-    setColor(zone); 
+    //setColor(zone); 
     if(zone == 0 || zone == 3 || zone == 4 || zone == 7) {
         double y= y_1;
         for(double x = x1; ; ) {

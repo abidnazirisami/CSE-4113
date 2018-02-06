@@ -32,6 +32,10 @@ void drawPoint(int x, int y, int zone) {
 
 
 void symmetricMidpoint(double x1, double y_1, double x2, double y2) {
+	if(x1==x2 && y_1==y2) {
+		glVertex2i(x1, y_1);
+		return;
+	}
 	int zone = selectZone(x1,y_1,x2,y2);
 	setColor(zone);
 	int converted_x = (int) x1;
@@ -87,7 +91,7 @@ void symmetricMidpoint(double x1, double y_1, double x2, double y2) {
                 d+=dne;
             }
         }
-	} while(converted_x != converted_x2 || converted_y != converted_y2);
+	} while(converted_x != converted_x2 && converted_y != converted_y2);
 	drawPoint(converted_x2,converted_y2,zone);
 }
 
