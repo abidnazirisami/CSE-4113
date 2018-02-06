@@ -82,10 +82,9 @@ void printpath(queens qu) {
 		qu.st.pop();
 		glBegin(GL_POINTS);
 	
-		setColor(m.queenNo);
-		ddaAlgo(m.oldposx*bias, m.oldposy*bias,m.newposx*bias, m.newposy*bias);
+		
 		for(double dk=bias/10.0;dk>=0.0;dk--) {
-			
+			setColor(m.queenNo);
 			double minx=m.newposx*bias-dk;
 			double miny=m.newposy*bias-dk;
 			double maxx=m.newposx*bias+dk;
@@ -94,8 +93,19 @@ void printpath(queens qu) {
 			ddaAlgo(minx,miny,maxx,miny);
 			ddaAlgo(maxx,maxy,minx,maxy);
 			ddaAlgo(maxx,maxy,maxx,miny);
+			glColor3f(0.0f,0.0f,0.0f);
+			minx=m.oldposx*bias-dk;
+			miny=m.oldposy*bias-dk;
+			maxx=m.oldposx*bias+dk;
+			maxy=m.oldposy*bias+dk;
+			ddaAlgo(minx,miny,minx,maxy);
+			ddaAlgo(minx,miny,maxx,miny);
+			ddaAlgo(maxx,maxy,minx,maxy);
+			ddaAlgo(maxx,maxy,maxx,miny);
 			
 		}
+		setColor(m.queenNo);
+		ddaAlgo(m.oldposx*bias, m.oldposy*bias,m.newposx*bias, m.newposy*bias);
 		glEnd();
 		glFlush();
 		printf("Continue? (y/n): ");

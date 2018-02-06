@@ -4,3 +4,4 @@ pls do not copy
 
 # Note:
  - The line clipping algo is not right in this code
+ - The 8-Queen simulation is added here
